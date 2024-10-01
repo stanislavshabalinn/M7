@@ -11,7 +11,7 @@ namespace M7
         abstract class VirtualMas //Базовый класс: хранения данных с защитой от выхода за размеры массива
         {
             protected string[,] Mas;//Двумерный массив Таблица данных
-            private int XMax = 0, YMax = 0;//Размера рассива
+            private int XMax = 0, YMax = 0;//Размер массива
             private string[,] CopyMas;//Временный массив
 
             public void wmas(int x, int y, string MyDate)
@@ -100,7 +100,7 @@ namespace M7
                 sr.Close();
             }
 
-            public void WriteMasFromFile(string fname) //Запист массива в файл
+            public void WriteMasFromFile(string fname) //Запись массива в файл
             {
                 int XM, YM;
                 if (optmas(out XM, out YM) == true) //Если таблица не пуста, параллельно читаем ее размерность
@@ -202,7 +202,7 @@ namespace M7
         static void Main(string[] args)
         {
             string[] comm = new string[3];
-            comm[0] = "Читать данные из файла: text.txt;";
+            comm[0] = "Читать данные: text.txt;";
             comm[1] = "Модифицировать данные;";
             comm[2] = "Вывксти данные на экран;";
             Fync.qMas(comm);
